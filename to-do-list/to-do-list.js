@@ -15,8 +15,6 @@ function addTask(){
     taskArr.push(allTaskText);
     (tasksText).value = '';
 
-    console.log(divTask);
-
     // divTask.style.
 
 }
