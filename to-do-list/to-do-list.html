@@ -15,16 +15,16 @@
             <form class="w-100 m-sm-0 m-md-5 py-sm-3 py-md-5 form-control form-control-lg shadow">
                 <h2 class="text-center font-weight-bold py-3">TO-DO LIST</h2>
                 <div class="input-group my-3 ">
-                    <input type="text" class="form-control py-sm py-md-3" placeholder="today's task" aria-label="today's task" aria-describedby="basic-addon2">
+                    <input type="text" class="form-control py-sm py-md-3" placeholder="today's task" aria-label="today's task" aria-describedby="basic-addon2" id="today-task">
                     <div class="input-group-append">
-                      <button class="btn btn-outline-secondary btn-success btn-group text-light py-sm py-md-3" type="button">Add tasks</button>
+                      <button class="btn btn-outline-secondary btn-success btn-group text-light py-sm py-md-3" id="addBtn" type="button">Add tasks</button>
                     </div>
                 </div>
-                <div class="input-group my-3  mt-5 shadow-lg d-none">
-                    <input type="text" class="form-control py-sm py-md-3" placeholder="" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                <div class="input-group my-3  mt-5 shadow-lg d-none" id="divTask">
+                    <input type="text" class="form-control py-sm py-md-3" placeholder="" aria-label="Recipient's username" aria-describedby="basic-addon2" id="taskInput">
                     <div class="input-group-append">
-                      <button class="btn btn-outline-secondary btn-secondary btn-group text-light py-sm py-md-3" type="button">Done</button>
-                      <button class="btn btn-outline-danger btn-danger btn-group text-light py-sm py-md-3" type="button">Delete</button>
+                      <button class="btn btn-outline-secondary btn-secondary btn-group text-light py-sm py-md-3" type="button" id="doneBtn">Done</button>
+                      <button class="btn btn-outline-danger btn-danger btn-group text-light py-sm py-md-3" type="button" id="delBtn">Delete</button>
                     </div>
                 </div>
             </form>
