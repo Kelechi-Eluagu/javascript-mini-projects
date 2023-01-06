@@ -3,9 +3,9 @@ let btn = document.getElementById('btn');
 let tacBoxes = Array.from(document.getElementsByClassName('tacList'));
 let winIndicator = getComputedStyle(document.body).getPropertyValue('--indicator');
 
-let textX = 'X';
-let textO = 'O';
-let currentPlayer = textX;
+let textX = ["x"];
+let textO = "0";
+let currentPlayer = textX[0];
 let blank = Array(9).fill(null);
 
 const starter = () => {
@@ -14,6 +14,8 @@ const starter = () => {
 
 function tacBoxClicked(e){
   const id = e.target.id
+  // console.log(e)
+  //pointer event
   if(!blank[id]) {
       blank[id] = currentPlayer;
       e.target.innerText = currentPlayer;

@@ -10,9 +10,9 @@
     <link rel="stylesheet" href="./to-do.css">
 </head>
 <body class="bg-light">
-    <main class="container-fluid">
-        <div class="d-flex justify-content-center py-5 py-md px-4 px-md-5">
-            <form class="w-100 m-sm-0 m-md-5 py-sm-3 py-md-5 form-control form-control-lg shadow">
+    <main class="container">
+        <div class="row justify-content-center py-5 py-md px-4 px-md-5">
+            <form class="col-12 col-md-8 py-sm-3 py-md-5 form-control form-control-lg shadow">
                 <h2 class="text-center font-weight-bold py-3">TO-DO LIST</h2>
                 <div class="input-group my-3 ">
                     <input type="text" class="form-control py-sm py-md-3" placeholder="today's task" aria-label="today's task" aria-describedby="basic-addon2" id="today-task">
@@ -31,6 +31,43 @@
 
         </div>
     </main>
+
+      <!-- <section class="todo-outer mt-1 mt-md-3">
+    <div class="container mt-5">
+      <div class="row justify-content-md-center">
+        <div class="col-12 col-md-8">
+          <h1 class="text-center my-3">Todo List</h1>
+          <div class="todo-inner">
+            <div class="form-row">
+              <div class="col-12 mb-4">
+                <input type="text" class="form-control" placeholder="Enter task to be done" id="addtaskinput" autofocus/>
+                <input type="hidden" id="saveindex" />
+              </div>
+              <div class="col-12 text-center mb-2 mb-md-3">
+                <button type="button" class="btn btn-success col-5" id="addtaskbtn">
+                  Add Task
+                </button>
+                <button type="button" id="deleteBtn" onClick="myFuction()" class="btn btn-danger col-5">
+                  Delete All
+                </button>
+                <div id="i" onclick="remove(this)">Sample text</div>
+                <!-- <button type="button" class="btn btn-danger col-5 d-none">
+                  Undo All
+                </button> -->
+                <!-- <input type="submit" id="showMsg" value="undo"> -->
+              <!-- </div>
+            </div>
+              <ul id="myTask"> -->
+                <!-- <li class="checked">Check Notes</li>
+                <li>Check bag</li>
+                <li>Check bag</li>
+                <li class="checked">love</li> -->
+              </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
 
 
     <!-- JavaScript Bundle -->

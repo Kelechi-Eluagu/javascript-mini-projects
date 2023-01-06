@@ -6,12 +6,16 @@ body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: "JetBrains Mono", sans-serif;
     background-color: #36505C;
     color: #fff;
+    height: 80vh;
+    display: flex;
+    align-items: center;
 }
-html {
+main {
     text-align: center;
+    width: 100%;
 }
 #btn {
     background-color: lightblue;
@@ -19,7 +23,8 @@ html {
     border-radius: 10px;
     border: 1px solid lightblue;
     transition: 200ms transform;
-    font-weight: 600;
+    font-weight: 300;
+    font-size: 15px;
     margin-bottom: 30px;
 }
 #btn:hover {

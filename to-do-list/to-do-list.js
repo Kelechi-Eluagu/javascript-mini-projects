@@ -9,13 +9,18 @@ let taskArr = [];
 
 let allTasks = () => addBtn.addEventListener('click', addTask);
 
-function addTask(){
+function addTask(e){
     let allTaskText = (tasksText).value;
 
     taskArr.push(allTaskText);
+    
     (tasksText).value = '';
 
-    // divTask.style.
+    console.log(taskArr)
+
+    divTask.style.display = 'visible';
+
+    console.log(divTask)
 
 }
 
