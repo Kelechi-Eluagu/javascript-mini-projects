@@ -1,27 +1,28 @@
-let tasksText = document.getElementById('today-task')
+let tasksText = document.getElementById('today-task');
 let addBtn = document.getElementById('addBtn');
-let taskInput = document.getElementById('taskInput');
+let taskInput = document.getElementById('taskInput').innerHTML;
 let doneBtn = document.getElementById('doneBtn');
 let delBtn = document.getElementById('delBtn');
-let divTask = document.getElementById('divTask')
+let divTask = document.getElementById('divTask');
 
 let taskArr = [];
 
 let allTasks = () => addBtn.addEventListener('click', addTask);
 
-function addTask(e){
-    let allTaskText = (tasksText).value;
+function addTask() {
+ // console.log(e);
+ let allTaskText = taskInput;
+ console.log(allTaskText);
 
-    taskArr.push(allTaskText);
-    
-    (tasksText).value = '';
+ // taskArr.push(allTaskText);
 
-    console.log(taskArr)
+ // (tasksText).value = '';
 
-    divTask.style.display = 'visible';
+ // console.log(taskArr)
 
-    console.log(divTask)
+ // divTask.style.display = 'visible';
 
+ // console.log(divTask)
 }
 
-allTasks()
+allTasks();
