@@ -10,7 +10,7 @@
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Poppins&display=swap');
       </style>
-      <link rel="stylesheet" href="./to-do.css">
+      <link rel="stylesheet" type="type/css" href="../to-do-list/to-do.css">
 </head>
 <body class="bg-light">
     <main class="container">
@@ -18,10 +18,10 @@
             <form class="col-12 col-md-8 py-sm-3 py-md-5 form-control form-control-lg shadow">
                 <h2 class="text-center font-weight-bold py-3">TO-DO LIST</h2>
                 <div class="input-group mt-3 ">
-                    <input type="text" class="form-control py-sm py-md-3" placeholder="today's task" aria-label="today's task" aria-describedby="basic-addon2" id="today-task">
-                      <button class="btn btn-outline-secondary btn-success btn-group text-light py-sm py-md-3 rounded-end id="addBtn" type="button">Add tasks</button>
+                    <input type="text" class="form-control py-sm py-md-3 inputText" placeholder="today's task" aria-label="today's task" aria-describedby="basic-addon2" id="today-task">
+                      <button class="btn btn-outline-secondary btn-success btn-group text-light py-sm py-md-3 rounded-end" id="addBtn" type="button">Add tasks</button>
                     <div class="input-group my-3  mt-4" id="divTask">
-                    <input type="text" class="shadow-none form-control py-md-3 border border-light outline-none rounded-0" placeholder="" aria-label="Recipient's username" aria-describedby="basic-addon2" id="taskInput">
+                    <input type="text" class="shadow-none form-control py-md-3 border border-light outline-none rounded-0 inputText" placeholder="" aria-label="Recipient's username" id="taskInput">
                     <div class="input-group-append mt-md-3 d-none">
                       <button class="btn btn-outline-secondary btn-secondary btn-group text-light py-sm py-md-2" type="button" id="doneBtn">Done</button>
                       <button class="btn btn-outline-danger btn-danger btn-group text-light py-sm py-md-2" type="button" id="delBtn">Delete</button>
@@ -70,6 +70,8 @@
 
     <!-- JavaScript Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-    <script src="./to-do-list.js"></script>
+    <script type="script/js" src="../to-do-list/to-do-list.js"></script>
+
+    
 </body>
 </html>
