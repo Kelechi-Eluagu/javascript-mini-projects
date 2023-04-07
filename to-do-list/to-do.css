@@ -12,10 +12,6 @@ body {
 #doneBtn:hover {
  background-color: green;
 }
-.inputText:focus {
- box-shadow: 2px 3px 5px #5e5858;
-}
-.btn {
-outline: none;
-box-shadow: none !important;
+#today-task:focus {
+ box-shadow: 2px 3px 5px #5e5858 !important;
 }
