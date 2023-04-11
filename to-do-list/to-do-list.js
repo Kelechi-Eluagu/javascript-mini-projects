@@ -1,11 +1,19 @@
-let tasksText = document.getElementById('today-task');
+'use strict';
+// let tasksText = document.getElementById('today-task');
 let addBtn = document.getElementById('addBtn');
 let taskInput = document.getElementById('taskInput');
 let doneBtn = document.getElementById('doneBtn');
 let delBtn = document.getElementById('delBtn');
 let divTask = document.getElementById('divTask');
 let valueTask = document.getElementById('today-task');
+let taskBtn = document.querySelector('.taskBtn');
 let formTask = document.getElementsByTagName('form')[0];
+// let doneButton = document.querySelector('.doneButton')
+// divTask.classList.add('d-none');
+
+valueTask.addEventListener('mouseout', function(){
+ valueTask.classList.add('clearBackground')
+})
 
 let allTasks = () => addBtn.addEventListener('click', addTask);
 
@@ -19,24 +27,31 @@ function addTask() {
   
  // }
  
- if (value.trim().length === 0 && typeof value !== Number ) {
+ if (value.trim() === '' && value.length === 0 && isNaN(value) !== 'number') {
   console.log('please type a task');
+  // console.log(taskInput.value);
  } else {
-  // const newTask = document.createElement('div');
+  // let newTask = document.createElement('div');
   // divTask.appendChild(newTask)
+  
   // divTask.classList.remove('d-none');
-
   let newTask = divTask.cloneNode(true);
-  newTask.classList.remove('d-none')
-  let valueTasks = valueTask.value;
   formTask.appendChild(newTask)
-  console.log(newTask);
-  console.log(newTask.value);
-  valueTask.value = '';
+  // newTask.classList.remove('d-none');
+  // divTask.remove();  
+  
+  // console.log(newTask);
+  newTask.classList.remove('d-none');
+  
+  let valueTasks = valueTask.value;
+  // console.log(valueTasks);
   // let newRow = document.createElement('div')
   // newRow.classList.add('row')
-  // newRow.innerHtml = 
+  // newRow.innerHtml =
+
   taskInput.value = valueTasks;
+  valueTask.value = '';
+  // console.log(valueTask.value);
  }
 }
 
@@ -58,18 +73,43 @@ let doneFunction = () =>
   }
  });
 
-//delete button function
-let deleteBtn = () => delBtn.addEventListener('click', delFunction);
 
-function delFunction() {
- divTask.classList.add('d-none');
-}
+//delete button function
+
+// function delFunction() {
+//   console.log('I am deleted');
+//   divTask.classList.add('d-none');
+//  }
+
 
 //this code block adds the onclick event on the html page
 // let delFunction = function(){
-//  divTask.classList.add('d-none');
-// }
+ 
+ // if(deleteBtn.innerText === 'Delete')
+ //  // divTask.classList.add('d-none');
+ //  // divTask.remove()
+ // }
+
+ // let deleteBtn = () => delBtn.addEventListener('click', delFunction);
+ 
+ let delFunction = function(){
+  // let divTasks = this.closest(divTask)
+  divTask.remove()
+ }
+ let deleteBtn = () => delBtn.addEventListener('click', delFunction);
+
+ // delBtn.forEach(btn => btn.addEventListener('click', delFunction))
+
+
+ // divTask.addEventListener('click', (event)=>{
+ //  if (event.target.matches(delBtn)) {
+ //   event.target.parentNode.remove();
+ //  }
+ // })
+
+ 
 
 allTasks();
 doneFunction();
 deleteBtn();
+// delBtn()
