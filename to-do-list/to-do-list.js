@@ -5,21 +5,36 @@ let doneBtn = document.getElementById('doneBtn');
 let delBtn = document.getElementById('delBtn');
 let divTask = document.getElementById('divTask');
 let valueTask = document.getElementById('today-task');
+let formTask = document.getElementsByTagName('form')[0];
 
 let allTasks = () => addBtn.addEventListener('click', addTask);
 
 function addTask() {
  let value = valueTask.value;
-
- if (value.trim().length === 0 && typeof value !== Number) {
+ 
+ // let firstInputValue = null;
+ // if (firstInputValue === null) {
+ //  firstInputValue = value
+ // } else {
+  
+ // }
+ 
+ if (value.trim().length === 0 && typeof value !== Number ) {
   console.log('please type a task');
  } else {
-  let valueTasks = valueTask.value;
+  // const newTask = document.createElement('div');
+  // divTask.appendChild(newTask)
+  // divTask.classList.remove('d-none');
 
+  let newTask = divTask.cloneNode(true);
+  newTask.classList.remove('d-none')
+  let valueTasks = valueTask.value;
+  formTask.appendChild(newTask)
+  console.log(newTask);
+  console.log(newTask.value);
   valueTask.value = '';
-  divTask.classList.remove('d-none');
-  let newRow = document.createElement('div')
-  newRow.classList.add('row')
+  // let newRow = document.createElement('div')
+  // newRow.classList.add('row')
   // newRow.innerHtml = 
   taskInput.value = valueTasks;
  }
