@@ -13,9 +13,5 @@ body {
  background-color: green;
 }
 #today-task:focus {
- box-shadow:none!important;
- background-color: white;
-}
-#today-task autocomplete:hover {
- background-color: red !important;
+ box-shadow:none !important;
 }
