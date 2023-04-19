@@ -11,31 +11,26 @@ let blank = Array(9).fill(null);
 const starter = () => {
   tacBoxes.forEach(tacBox => tacBox.addEventListener('click', tacBoxClicked));
 }
-
+ 
+//here game isn't finished
 let finshedGame = false;
-
-
-// if(finshedGame){
-//     return;
-//   }
 
 function tacBoxClicked(e){
   const id = e.target.id
-  // console.log(e)
-  //pointer event
 
+  if(finshedGame) return 
   
   if(!blank[id]) {
       blank[id] = currentPlayer;
       
+      //grabs the event innerText (first player)
       e.target.innerText = currentPlayer;
            
       if(playerWon() !== false){
         let winText = `${currentPlayer} has won!`;
-        console.log(winText);
         tacText.innerText = winText;
+        //here game is finished
         finshedGame = true;
-        console.log(winText);
         
         
         let winBlock = playerWon();
@@ -48,12 +43,7 @@ function tacBoxClicked(e){
         return;
       }
     }
-    //  setTimeout(() => {
-    //       let emptyBlock = ''
-    //       tacText.innerText = emptyBlock
-    //       emptyBlock = winText
-    //     }, 1000);
-    //   console.log(winText);
+    
     currentPlayer = currentPlayer == textX ? textO : textX;
   }
 }
@@ -85,9 +75,10 @@ function playerWon(){
 btn.addEventListener('click', restartBtn);
 
 function restartBtn() {
- blank.fill(true); 
- console.log(blank.fill(true));
-//  location.reload()
+
+//fils the boxes with null and sets game to not finished
+ blank.fill(null); 
+ finshedGame = false;
 
  tacBoxes.forEach(tacBox => {
     tacBox.innerText = '';
@@ -99,5 +90,4 @@ function restartBtn() {
   
   currentPlayer = textX;
   tacText.innerText = 'Tic-Tac-Toe';
-  finishedGame = false;
 }
