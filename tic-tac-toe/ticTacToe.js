@@ -3,7 +3,7 @@ let btn = document.getElementById('btn');
 let tacBoxes = Array.from(document.getElementsByClassName('tacList'));
 let winIndicator = getComputedStyle(document.body).getPropertyValue('--indicator');
 
-let textX = ["x"];
+let textX = "X";
 let textO = "0";
 let currentPlayer = textX[0];
 let blank = Array(9).fill(null);
@@ -12,17 +12,31 @@ const starter = () => {
   tacBoxes.forEach(tacBox => tacBox.addEventListener('click', tacBoxClicked));
 }
 
+let finshedGame = false;
+
+
+// if(finshedGame){
+//     return;
+//   }
+
 function tacBoxClicked(e){
   const id = e.target.id
   // console.log(e)
   //pointer event
+
+  
   if(!blank[id]) {
       blank[id] = currentPlayer;
+      
       e.target.innerText = currentPlayer;
            
       if(playerWon() !== false){
-        let winText = `${currentPlayer} has won!`
+        let winText = `${currentPlayer} has won!`;
+        console.log(winText);
         tacText.innerText = winText;
+        finshedGame = true;
+        console.log(winText);
+        
         
         let winBlock = playerWon();
 
@@ -34,6 +48,12 @@ function tacBoxClicked(e){
         return;
       }
     }
+    //  setTimeout(() => {
+    //       let emptyBlock = ''
+    //       tacText.innerText = emptyBlock
+    //       emptyBlock = winText
+    //     }, 1000);
+    //   console.log(winText);
     currentPlayer = currentPlayer == textX ? textO : textX;
   }
 }
@@ -65,7 +85,9 @@ function playerWon(){
 btn.addEventListener('click', restartBtn);
 
 function restartBtn() {
- blank.fill(null); 
+ blank.fill(true); 
+ console.log(blank.fill(true));
+//  location.reload()
 
  tacBoxes.forEach(tacBox => {
     tacBox.innerText = '';
@@ -77,4 +99,5 @@ function restartBtn() {
   
   currentPlayer = textX;
   tacText.innerText = 'Tic-Tac-Toe';
+  finishedGame = false;
 }
