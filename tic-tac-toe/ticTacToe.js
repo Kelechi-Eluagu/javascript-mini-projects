@@ -3,8 +3,9 @@ let btn = document.getElementById('btn');
 let tacBoxes = Array.from(document.getElementsByClassName('tacList'));
 let winIndicator = getComputedStyle(document.body).getPropertyValue('--indicator');
 
-let textX = "X";
-let textO = "0";
+let textX = 'x';
+let text0 = 'o';
+
 let currentPlayer = textX[0];
 let blank = Array(9).fill(null);
 
@@ -44,7 +45,7 @@ function tacBoxClicked(e){
       }
     }
     
-    currentPlayer = currentPlayer == textX ? textO : textX;
+    currentPlayer = currentPlayer == textX ? text0 : textX;
   }
 }
 
