@@ -1,12 +1,11 @@
 :root {
     --indicator: #36505C;
-    /* --indicatorBorder: 1px solid lightblue; */
 }
 body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: "JetBrains Mono", sans-serif;
+    font-family: 'Chivo Mono', monospace;
     background-color: #36505C;
     color: #fff;
     height: 80vh;
@@ -19,20 +18,28 @@ main {
 }
 #btn {
     background-color: lightblue;
+    font-size: 14px;
     padding: 10px 20px;
     border-radius: 10px;
-    border: 1px solid lightblue;
+    border: 3px solid lightblue;
     transition: 200ms transform;
-    font-weight: 300;
-    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    font-size: 17px;
     margin-bottom: 30px;
+    -webkit-transition: 200ms transform;
+    -moz-transition: 200ms transform;
+    -ms-transition: 200ms transform;
+    -o-transition: 200ms transform;
 }
 #btn:hover {
     cursor: pointer;
     background-color: #36505C;
     color: #fff;
-    /* border: 2px solid lightblue; */
-    transform: translateY(-2px);
+    box-shadow: 5px 5px 5px lightblue;
+    transform: translateY(-4px);
+    transition: transform 0.6s ease-out;
+    transition: background-color 0.4s ease-out;
 }
 section {
     display: flex;
