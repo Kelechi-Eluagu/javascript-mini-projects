@@ -11,38 +11,38 @@ let formTask = document.getElementsByTagName('form')[0];
 // let doneButton = document.querySelector('.doneButton')
 // divTask.classList.add('d-none');
 
-valueTask.addEventListener('mouseout', function(){
- valueTask.classList.add('clearBackground')
-})
+valueTask.addEventListener('mouseout', function () {
+ valueTask.classList.add('clearBackground');
+});
 
 let allTasks = () => addBtn.addEventListener('click', addTask);
 
 function addTask() {
  let value = valueTask.value;
- 
+
  // let firstInputValue = null;
  // if (firstInputValue === null) {
  //  firstInputValue = value
  // } else {
-  
+
  // }
- 
+
  if (value.trim() === '' && value.length === 0 && isNaN(value) !== 'number') {
   console.log('please type a task');
   // console.log(taskInput.value);
  } else {
   // let newTask = document.createElement('div');
   // divTask.appendChild(newTask)
-  
+
   // divTask.classList.remove('d-none');
   let newTask = divTask.cloneNode(true);
-  formTask.appendChild(newTask)
+  formTask.appendChild(newTask);
   // newTask.classList.remove('d-none');
-  // divTask.remove();  
-  
+  // divTask.remove();
+
   // console.log(newTask);
   newTask.classList.remove('d-none');
-  
+
   let valueTasks = valueTask.value;
   // console.log(valueTasks);
   // let newRow = document.createElement('div')
@@ -55,8 +55,6 @@ function addTask() {
  }
 }
 
-
-
 //done button
 let doneFunction = () =>
  doneBtn.addEventListener('click', function () {
@@ -67,12 +65,11 @@ let doneFunction = () =>
    taskInput.disabled = true;
   } else {
    taskInput.disabled = false;
-   doneBtn.classList.remove('bg-danger')
+   doneBtn.classList.remove('bg-danger');
    doneBtn.classList.add('bg-success');
    doneBtn.innerText = 'Done✅';
   }
  });
-
 
 //delete button function
 
@@ -81,33 +78,29 @@ let doneFunction = () =>
 //   divTask.classList.add('d-none');
 //  }
 
-
 //this code block adds the onclick event on the html page
 // let delFunction = function(){
- 
- // if(deleteBtn.innerText === 'Delete')
- //  // divTask.classList.add('d-none');
- //  // divTask.remove()
- // }
 
- // let deleteBtn = () => delBtn.addEventListener('click', delFunction);
- 
- let delFunction = function(){
-  // let divTasks = this.closest(divTask)
-  divTask.remove()
- }
- let deleteBtn = () => delBtn.addEventListener('click', delFunction);
+// if(deleteBtn.innerText === 'Delete')
+//  // divTask.classList.add('d-none');
+//  // divTask.remove()
+// }
 
- // delBtn.forEach(btn => btn.addEventListener('click', delFunction))
+// let deleteBtn = () => delBtn.addEventListener('click', delFunction);
 
+let delFunction = function () {
+ // let divTasks = this.closest(divTask)
+ divTask.remove();
+};
+let deleteBtn = () => delBtn.addEventListener('click', delFunction);
 
- // divTask.addEventListener('click', (event)=>{
- //  if (event.target.matches(delBtn)) {
- //   event.target.parentNode.remove();
- //  }
- // })
+// delBtn.forEach(btn => btn.addEventListener('click', delFunction))
 
- 
+// divTask.addEventListener('click', (event)=>{
+//  if (event.target.matches(delBtn)) {
+//   event.target.parentNode.remove();
+//  }
+// })
 
 allTasks();
 doneFunction();
