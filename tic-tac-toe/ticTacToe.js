@@ -30,11 +30,11 @@ function tacBoxClicked(e){
       if(playerWon() !== false){
         let winText = `${currentPlayer} has won!`;
         tacText.innerText = winText;
-        //here game is finished
-        finshedGame = true;
         
         
         let winBlock = playerWon();
+        //here game is finished
+        finshedGame = true;
 
       if(playerWon()){
         currentPlayer = ''; 
